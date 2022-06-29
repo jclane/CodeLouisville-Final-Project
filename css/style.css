@@ -22,3 +22,39 @@ header {
 nav ul {
     display: none;
 }
+
+#trending-products ol, #new-products ul {
+    display: flex;
+    flex-flow: column nowrap;
+    list-style: none;
+    padding: 0; 
+}
+
+.trending-product, .new-product {
+    display: grid;
+    grid-template-areas: "pi pn pn"
+                         "pi pd pd"
+                         "pi par pr";
+}
+
+.trending-product img, .new-product img {
+    grid-area: pi;
+    width: 100px;
+    height: 100px;
+}
+
+.trending-product .product-name, .new-product .product-name {
+    grid-area: pn;
+}
+
+.trending-product .product-desc-short {
+    grid-area: pd;
+}
+
+.trending-product .product-avgrating, .new-product .product-avgrating {
+    grid-area: par;
+}
+
+.trending-product .product-reviews, .new-product .product-reviews {
+    grid-area: pr;
+}
