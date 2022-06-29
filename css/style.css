@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    justify-content: center;
+}
+
+.logo {
+    grid-column: 2;
+}
+
+.member-links {
+}
+
+nav ul {
+    display: none;
+}
