@@ -5,6 +5,7 @@ body {
 
 header {
     display: grid;
+    border: 1px solid black;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     justify-content: center;
@@ -15,6 +16,7 @@ header {
 }
 
 .member-links {
+    justify-self: end;
 }
 
 nav ul {
