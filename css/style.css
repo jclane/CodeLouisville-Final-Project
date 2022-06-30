@@ -25,26 +25,35 @@ nav ul {
     display: none;
 }
 
+.lists-container {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.list-heading {
+    background: red;
+    padding: .15em;
+    margin: 1em .15em 0;
+    border-radius: 15px 15px 0 0;
+}
+
 .product-list {
     display: flex;
     flex-flow: column nowrap;
     list-style: none;
     background: #FFF;
     color: #000;
-    border-radius: 15px;
+    border-radius: 0 0 15px 15px;
     padding: .5em;
-    margin: .25em;
-}
-
-.product-list h2 {
-    background: red;
-    margin: 0 .5em .5em;
+    margin: 0 .25em .25em;
 }
 
 .product-info {
     display: grid;
     justify-content: start;
     align-items: center;
+    height: 9em;
+    margin: 1em;
     grid-template-areas: "pi pn"
                          "pi pd"
                          "pi ps";
@@ -54,6 +63,7 @@ nav ul {
     grid-area: pi;
     width: 100px;
     height: 100px;
+    border-radius: 5px;
 }
 
 .product-name {
@@ -71,7 +81,8 @@ nav ul {
 }
 
 @media only screen and (min-width: 500px) {
-    body {
-        display: none;
-    }
+    .lists-container {
+        display: flex;
+        flex-flow: row nowrap;
+    }    
 }
