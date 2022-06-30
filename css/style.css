@@ -1,11 +1,13 @@
 body {
     margin: 0;
     padding: 0;
+    background: #000;
+    color: #FFF;
 }
 
 header {
     display: grid;
-    border: 1px solid black;
+    border: 1px solid #000;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     justify-content: center;
@@ -27,7 +29,16 @@ nav ul {
     display: flex;
     flex-flow: column nowrap;
     list-style: none;
-    padding: 0; 
+    background: #FFF;
+    color: #000;
+    border-radius: 15px;
+    padding: .5em;
+    margin: .25em;
+}
+
+.product-list h2 {
+    background: red;
+    margin: 0 .5em .5em;
 }
 
 .product-info {
@@ -57,4 +68,10 @@ nav ul {
     display: flex;
     flex-flow: row wrap;
     grid-area: ps;
+}
+
+@media only screen and (min-width: 500px) {
+    body {
+        display: none;
+    }
 }
