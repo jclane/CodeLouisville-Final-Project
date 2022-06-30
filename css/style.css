@@ -23,14 +23,14 @@ nav ul {
     display: none;
 }
 
-#trending-products ol, #new-products ul {
+.product-list {
     display: flex;
     flex-flow: column nowrap;
     list-style: none;
     padding: 0; 
 }
 
-.trending-product, .new-product {
+.product-info {
     display: grid;
     justify-content: start;
     align-items: center;
@@ -39,21 +39,21 @@ nav ul {
                          "pi ps";
 }
 
-.trending-product img, .new-product img {
+.product-img {
     grid-area: pi;
     width: 100px;
     height: 100px;
 }
 
-.trending-product .product-name, .new-product .product-name {
+.product-name {
     grid-area: pn;
 }
 
-.trending-product .product-desc-short {
+.product-desc-short {
     grid-area: pd;
 }
 
-.trending-product .product-stats, .new-product .product-stats {
+.product-stats {
     display: flex;
     flex-flow: row wrap;
     grid-area: ps;
