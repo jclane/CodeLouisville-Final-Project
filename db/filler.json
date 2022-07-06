@@ -2,6 +2,8 @@
     {
         "pid": 1,
         "pname": "Monster Ketchup",
+        "img": ".\\img\\monster_ketchup.jpg",
+        "imgAltTxt": "A bottle of very green Monster flavored ketchup.",
         "shortDesc": "Monster flavored ketchup.",
         "longDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptas eius est obcaecati odio aspernatur.",
         "ratings":[2, 9, 8, 5, 9, 7, 8, 9, 10, 20]
@@ -9,6 +11,8 @@
     {
         "pid": 2,
         "pname": "Heinz 57 Sauce",
+        "img": ".\\img\\heinz_57.jpg",
+        "imgAltTxt": "A bottle of Heinz 57 steak sauce.",
         "shortDesc": "Heinz 57 steak sauce.",
         "longDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptas eius est obcaecati odio aspernatur.",
         "ratings":[2, 3, 4, 5, 10, 7, 8, 9, 10, 10]
