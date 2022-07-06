@@ -20,23 +20,29 @@ const buildListItem = (itemData) => {
     console.log(li, img, name, shortDesc);
 }
 
-const getData = () => {
-    let data = [];
-    fetch(".\\db\\filler.json")
-        .then(res => {return res.json()})
-        .then(json => {
-            for (let i=0;i<json.length;i++) {
-                data.push(json[i]);
-            }
-        })
-        .catch(err => console.log(err));
+const DATA = [
+    {
+        "pid": 1,
+        "pname": "Monster Ketchup",
+        "img": ".\\img\\monster_ketchup.jpg",
+        "imgAltTxt": "A bottle of very green Monster flavored ketchup.",
+        "shortDesc": "Monster flavored ketchup.",
+        "longDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptas eius est obcaecati odio aspernatur.",
+        "ratings":[2, 9, 8, 5, 9, 7, 8, 9, 10, 20]
+    },
+    {
+        "pid": 2,
+        "pname": "Heinz 57 Sauce",
+        "img": ".\\img\\heinz_57.jpg",
+        "imgAltTxt": "A bottle of Heinz 57 steak sauce.",
+        "shortDesc": "Heinz 57 steak sauce.",
+        "longDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptas eius est obcaecati odio aspernatur.",
+        "ratings":[2, 3, 4, 5, 10, 7, 8, 9, 10, 10]
+    }
+];
 
-    return data;
-}
-
-const DATA = getData();
 const TRENDING = document.querySelector("#trending-products");
-console.log(DATA);
+
 for (let i = 0; i < DATA.length; i++) {
-    console.log(i);
+    console.log(createImgElement(DATA[i]));
 }
