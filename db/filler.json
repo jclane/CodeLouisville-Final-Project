@@ -1,0 +1,16 @@
+[
+    {
+        "pid": 1,
+        "pname": "Monster Ketchup",
+        "shortDesc": "Monster flavored ketchup.",
+        "longDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptas eius est obcaecati odio aspernatur.",
+        "ratings":[2, 9, 8, 5, 9, 7, 8, 9, 10, 20]
+    },
+    {
+        "pid": 2,
+        "pname": "Heinz 57 Sauce",
+        "shortDesc": "Heinz 57 steak sauce.",
+        "longDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptas eius est obcaecati odio aspernatur.",
+        "ratings":[2, 3, 4, 5, 10, 7, 8, 9, 10, 10]
+    }
+]

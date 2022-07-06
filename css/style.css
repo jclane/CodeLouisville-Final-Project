@@ -74,6 +74,10 @@ nav ul {
     grid-area: pd;
 }
 
+.product-desc-long {
+    display: hidden;
+}
+
 .product-stats {
     display: flex;
     flex-flow: row wrap;
