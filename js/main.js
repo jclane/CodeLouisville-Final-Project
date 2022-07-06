@@ -5,24 +5,35 @@ const createImgElement = (src, altTxt) => {
     return img;
 }
 
+const createLinkElement = (txt, url) => {
+    let a = document.createElement("a");
+    a.setAttribute("href", url);
+    a.innerHTML = txt;
+    return a;
+}
+
+
 const buildListItem = (itemData) => {
     let li = document.createElement("li");
-    let img = createImgElement(itemData["img"], itemData["imgAltText"]);
-
-    let name = document.createElement("a");
-    name.setAttribute("class", "product-name");
-    name.setAttribute("href", "#");
+    let img = createImgElement(itemData.img, itemData.imgAltTxt);
+    let name = createLinkElement(itemData.pname, itemData.url);
 
     let shortDesc = document.createElement("span");
     shortDesc.setAttribute("class", "product-desc")
     shortDesc.innerText = itemData.shortDesc;
 
-    console.log(li, img, name, shortDesc);
+    li.appendChild(img);
+    li.appendChild(name);
+    li.appendChild(shortDesc);
+
+    console.log(li);
+
 }
 
 const DATA = [
     {
         "pid": 1,
+        "url": "#",
         "pname": "Monster Ketchup",
         "img": ".\\img\\monster_ketchup.jpg",
         "imgAltTxt": "A bottle of very green Monster flavored ketchup.",
@@ -32,6 +43,7 @@ const DATA = [
     },
     {
         "pid": 2,
+        "url": "#",
         "pname": "Heinz 57 Sauce",
         "img": ".\\img\\heinz_57.jpg",
         "imgAltTxt": "A bottle of Heinz 57 steak sauce.",
@@ -44,5 +56,5 @@ const DATA = [
 const TRENDING = document.querySelector("#trending-products");
 
 for (let i = 0; i < DATA.length; i++) {
-    console.log(createImgElement(DATA[i]));
+    buildListItem(DATA[i]);
 }
