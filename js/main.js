@@ -58,7 +58,18 @@ const DATA = [
         Use as a sauce for chicken, steak and pork
         Packaged in a bottle for easy dispensing`,
         "ratings":Array.from({ length: Math.floor(Math.random() * 112) }, () => Math.floor((Math.random() * 9) + 1)),
+    },
+    {
+        "pid": 5,
+        "pname": "Tesco Smooth Peanut Butter",
+        "img": ".\\img\\tesco_smooth_peanut_butter.jpeg",
+        "imgAltTxt": "A 340G jar of Tesco Smooth Penut Butter.",
+        "shortDesc": "Smooth peanut butter.",
+        "longDesc": `CLASSIC RECIPE Roasted then blended for a smooth, rounded flavour`,
+        "ratings":Array.from({ length: Math.floor(Math.random() * 112) }, () => Math.floor((Math.random() * 9) + 1)),
     }
+
+    
 ];
 
 const createImgElement = (src, altTxt) => {
