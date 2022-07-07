@@ -48,36 +48,36 @@ nav ul {
     margin: 0 .25em .25em;
 }
 
-.product-info {
+.product {
     display: grid;
     justify-content: start;
     align-items: center;
     height: 9em;
     margin: 1em;
-    grid-template-areas: "pi pn"
-                         "pi pd"
-                         "pi ps";
+    grid-template-areas: "img pi";
 }
 
 .product-img {
-    grid-area: pi;
+    grid-area: img;
     width: 100px;
     height: 100px;
     border-radius: 5px;
+}
+
+.product-info {
+    grid-area: pi;
+    display: flex;
+    flex-flow: column wrap;
 }
 
 .product-name {
     grid-area: pn;
 }
 
-.product-desc-short {
+.product-desc {
     grid-area: pd;
-}
-
-.product-desc-long {
-    display: block;
-    width: 100px;
-    height: 3rem;
+    width: auto;
+    height: 1rem;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
