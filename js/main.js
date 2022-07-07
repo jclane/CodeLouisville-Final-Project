@@ -87,6 +87,13 @@ const createLinkElement = (txt, url) => {
     return a;
 }
 
+const createSpanElement = (txt, classList) => {
+    let span = document.createElement("span");
+    span.innerText = txt;
+    span.classList = classList;
+    return span;
+}
+ 
 const createStatsElement = (ratings) => {
     const sum = ratings.length ? ratings.reduce((a, b) => {return a+b}) : 0;
     const avg =  sum ? sum / ratings.length : 0.0;
@@ -94,13 +101,8 @@ const createStatsElement = (ratings) => {
     let div = document.createElement("div");
     div.classList = "product-stats";
 
-    let avgRatingSpan = document.createElement("span");
-    avgRatingSpan.innerText = "Avg. Rating: ";
-    avgRatingSpan.classList = "product-avgrating";
-    
-    let avgRating = document.createElement("a");
-    avgRating.setAttribute("href", "#");
-    avgRating.innerText = `${avg.toFixed(1)} (${sum.toLocaleString("en-US")})`;
+    let avgRatingSpan = createSpanElement("Avg. Rating: ", "product-avgrating")
+    let avgRating = createLinkElement(`${avg.toFixed(1)} (${sum.toLocaleString("en-US")})`, "#")
 
     avgRatingSpan.appendChild(avgRating);
     div.appendChild(avgRatingSpan);
