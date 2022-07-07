@@ -113,7 +113,7 @@ const DATA = [
     },    
 ];
 
-const createImgElement = (src, altTxt) => {
+function createImgElement (src, altTxt) {
     let img = document.createElement("img");
     img.setAttribute("src", src);
     img.setAttribute("alt", altTxt);
@@ -121,21 +121,21 @@ const createImgElement = (src, altTxt) => {
     return img;
 }
 
-const createLinkElement = (txt, url) => {
+function createLinkElement(txt, url) {
     let a = document.createElement("a");
     a.setAttribute("href", url);
     a.innerHTML = txt;
     return a;
 }
 
-const createSpanElement = (txt, classList) => {
+function createSpanElement(txt, classList) {
     let span = document.createElement("span");
     span.innerText = txt;
     span.classList = classList;
     return span;
 }
 
-const createStatsElement = (ratings) => {
+function createStatsElement(ratings) {
     const sum = ratings.length ? ratings.reduce((a, b) => {return a+b}) : 0;
     const avg =  sum ? sum / ratings.length : 0.0;
 
@@ -151,14 +151,15 @@ const createStatsElement = (ratings) => {
     return div;
 }
 
-const createParagraphElement = (txt, classList) => {
+// Might not need this, delete if not used.
+function createParagraphElement(txt, classList) {
     let p = document.createElement("span");
     p.innerText = txt;
     p.classList = classList;
     return p;
 }
 
-const buildProductInfo = (itemData) => {
+function buildProductInfo(itemData) {
     let div = document.createElement("div");
     div.classList = "product-info";
 
@@ -170,7 +171,7 @@ const buildProductInfo = (itemData) => {
     return div;
 }
 
-const buildListItem = (itemData) => {
+function buildListItem(itemData) {
     let li = document.createElement("li");
     li.classList = "product";
 
@@ -180,7 +181,7 @@ const buildListItem = (itemData) => {
     return li;
 }
 
-const populateList = (articleClass, products) => {
+function populateList(articleClass, products) {
     const articleElement = document.querySelector("#" + articleClass);
     const listElement = articleElement.querySelector(".product-list");
     for (let i = 0; i < products.length; i++) {
