@@ -39,7 +39,7 @@ const createLinkElement = (txt, url) => {
 const buildListItem = (itemData) => {
     let li = document.createElement("li");
     li.classList = "product-info";
-    
+
     let img = createImgElement(itemData.img, itemData.imgAltTxt);
     let name = createLinkElement(itemData.pname, itemData.url);
 
@@ -54,14 +54,13 @@ const buildListItem = (itemData) => {
     return li;
 }
 
-const populateTrending = () => {
-    const TRENDING = document.querySelector("#trending-products");
-    const LIST = TRENDING.querySelector(".product-list")
-    console.log(TRENDING, LIST);       
+const populateList = (articleClass) => {
+    const articleElement = document.querySelector("#" + articleClass);
+    const listElement = articleElement.querySelector(".product-list");
     for (let i = 0; i < DATA.length; i++) {
         let li = buildListItem(DATA[i]);
-        LIST.appendChild(li);
+        listElement.appendChild(li);
     }
 }
 
-populateTrending();
+populateList("trending-products");
