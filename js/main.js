@@ -36,12 +36,34 @@ const createLinkElement = (txt, url) => {
     return a;
 }
 
+const createStatsElement = (ratings) => {
+    const sum = ratings.length ? ratings.reduce((a, b) => {return a+b}) : 0;
+    const avg =  sum ? sum / ratings.length : 0.0;
+
+    let div = document.createElement("div");
+    div.classList = "product-stats";
+
+    let avgRatingSpan = document.createElement("span");
+    avgRatingSpan.innerText = "Avg. Rating: ";
+    avgRatingSpan.classList = "product-avgrating";
+    
+    let avgRating = document.createElement("a");
+    avgRating.setAttribute("href", "#");
+    avgRating.innerText = `${avg} (${sum.toLocaleString("en-US")})`;
+
+    avgRatingSpan.appendChild(avgRating);
+    div.appendChild(avgRatingSpan);
+
+    return div;
+}
+
 const buildListItem = (itemData) => {
     let li = document.createElement("li");
     li.classList = "product-info";
 
     let img = createImgElement(itemData.img, itemData.imgAltTxt);
     let name = createLinkElement(itemData.pname, itemData.url);
+    let stats = createStatsElement(itemData.ratings);
 
     let shortDesc = document.createElement("span");
     shortDesc.setAttribute("class", "product-desc")
@@ -50,6 +72,7 @@ const buildListItem = (itemData) => {
     li.appendChild(img);
     li.appendChild(name);
     li.appendChild(shortDesc);
+    li.appendChild(stats);
 
     return li;
 }
