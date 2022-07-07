@@ -11,7 +11,7 @@ const DATA = [
         SALAD DRESSING: Get your daily dose of veggies in a delicious way by adding Ranch as a salad topping or use as a classic veggie dip
         CONDIMENT: Use as a topper on burgers sandwiches and wraps to refresh your meal prep or weeknight routine or as a dip with chips pizza and chicken strips
         DINNER MADE EASY: Add instant flavor to your favorite salad, meal or side dish with a touch of creamy Hidden Valley Original Ranch Dressing.`,
-        "ratings":[2, 9, 8, 5, 9, 7, 8, 9, 10, 20]
+        "ratings": Array.from({ length: Math.floor(Math.random() * 112) }, () => Math.floor((Math.random() * 9) + 1))
     },
     {
         "pid": 2,
@@ -26,7 +26,7 @@ const DATA = [
         Brush on beef, chicken, pork, or shrimp during the last 15 minutes of barbecuing or broiling
         Pour it onto burgers and brats, or dip with nuggets and fries.  The ultimate sauce for BBQ Chicken Pizza.
         Gluten Free and Certified Kosher`,
-        "ratings":[2, 3, 4, 5, 10, 7, 8, 9, 10, 10]
+        "ratings": Array.from({ length: Math.floor(Math.random() * 112) }, () => Math.floor((Math.random() * 9) + 1))
     },
     {
         "pid": 3,
@@ -41,7 +41,7 @@ const DATA = [
         0 calories and 1g net carb per serving
         Kosher
         Gluten Free`,
-        "ratings":[2, 3, 4, 5, 10, 7, 8, 9, 10, 10]
+        "ratings": Array.from({ length: Math.floor(Math.random() * 112) }, () => Math.floor((Math.random() * 9) + 1))
     },
     {
         "pid": 4,
@@ -57,7 +57,7 @@ const DATA = [
         Made with tomato puree, vinegar and a secret blend of spices with 20 calories per serving
         Use as a sauce for chicken, steak and pork
         Packaged in a bottle for easy dispensing`,
-        "ratings":Array.from({ length: Math.floor(Math.random() * 112) }, () => Math.floor((Math.random() * 9) + 1)),
+        "ratings": Array.from({ length: Math.floor(Math.random() * 112) }, () => Math.floor((Math.random() * 9) + 1)),
     },
     {
         "pid": 5,
@@ -66,10 +66,60 @@ const DATA = [
         "imgAltTxt": "A 340G jar of Tesco Smooth Penut Butter.",
         "shortDesc": "Smooth peanut butter.",
         "longDesc": `CLASSIC RECIPE Roasted then blended for a smooth, rounded flavour`,
+        "ratings": Array.from({ length: Math.floor(Math.random() * 112) }, () => Math.floor((Math.random() * 9) + 1)),
+    },
+    {
+        "pid": 6,
+        "pname": "De La Rosa Mazapan",
+        "img": ".\\img\\de_la_rosa_mazapan.jpeg",
+        "imgAltTxt": "Various pieces of De La Rosa Mazapan candies.",
+        "shortDesc": "De La Rosa Mazapan peanut confections!",
+        "longDesc": `De La Rosa Mazapan peanut confections! These triple layer peanut marzipan candies are a delicious, round chewy candy made of crushed peanuts.`,
         "ratings":Array.from({ length: Math.floor(Math.random() * 112) }, () => Math.floor((Math.random() * 9) + 1)),
-    }
+    },
+    {
+        "pid": 7,
+        "pname": "HP Brown Sauce",
+        "img": ".\\img\\hp_brown_sauce.jpeg",
+        "imgAltTxt": "A 425G bottle of HP Brown Sauce.",
+        "shortDesc": "HP Brown Sauce has a delicious, tangy flavour that will enhance any hot dog or bacon sandwich.",
+        "longDesc": `HP Brown Sauce has a delicious, tangy flavour that will enhance any hot dog or bacon sandwich. If you are a fan of brown sauce then you can’t go far wrong with this classic sauce from the experts at HP.
 
-    
+        The best way to enjoy your sauce, there’s no waste at the end and it immediately delivers your sauce with no difficulties or complications!
+        
+        Most popular with customers in United States of America (USA), France, Italy, Germany, Austria, Spain, Netherlands, Canada and Portugal, but you can buy HP Brown Sauce for delivery worldwide.`,
+        "ratings": Array.from({ length: Math.floor(Math.random() * 112) }, () => Math.floor((Math.random() * 9) + 1)),
+    },
+    {
+        "pid": 8,
+        "pname": "Miss Vickie's Sweet & Spicy Ketchup Kettle Cooked Chips",
+        "img": ".\\img\\miss_vickies_sweet_spicy_ketchup_chips.jpeg",
+        "imgAltTxt": "A 190G/6.7OZ bag of Miss Vickie's Sweet & Spicy Ketchup Kettle Cooked Chips.",
+        "shortDesc": "Crafted to deliver a unique twist on the iconic Ketchup flavor.",
+        "longDesc": `Miss Vickie's Sweet & Spicy Ketchup flavor kettle-cooked potato chips are crafted to deliver a unique twist on the iconic Ketchup flavor. This flavor brings together the deliciousness of both Sweet And Spicy profiles to create an elevated snacking experience.`,
+        "ratings": Array.from({ length: Math.floor(Math.random() * 112) }, () => Math.floor((Math.random() * 9) + 1)),
+    },
+    {
+        "pid": 9,
+        "pname": "Arnott's Tim Tam Chocolate Biscuits Double Coat",
+        "img": ".\\img\\tim_tam_chocolate_biscuits_double_coat.jpeg",
+        "imgAltTxt": "A 240G package of Arnott's Tim Tam Chocolate Biscuits Double Coat.",
+        "shortDesc": "Arnott's Tim Tam Double Coat Chocolate biscuits are made with irresistible real chocolate.",
+        "longDesc": `Arnott's Tim Tam Double Coat Chocolate biscuits are made with irresistible real chocolate. The most irresistible chocolate biscuit. A mouth-watering combination of crunchy biscuit, creamy filling and real chocolate coating, it's easy to see why Tim Tams are Australia’s most-loved chocolate biscuit. Share a packet of these deliciously sweet biscuits with your friends and family today.
+        Imported from Australia
+        200 grams
+        Irresistible real chocolate`,
+        "ratings": Array.from({ length: Math.floor(Math.random() * 112) }, () => Math.floor((Math.random() * 9) + 1)),
+    },
+    {
+        "pid": 10,
+        "pname": "Samyang Hot Chicken Flavor Ramen",
+        "img": ".\\img\\samyang_hot_chicken_flavor_ramen.jpeg",
+        "imgAltTxt": "Cup of Samyang Hot Chicken Flavor Ramen.",
+        "shortDesc": "Delicious spicy chicken flavor, fried noodle with spicy seasoning in a cup from Korea.",
+        "longDesc": `Delicious spicy chicken flavor, fried noodle with spicy seasoning in a cup from Korea.`,
+        "ratings": Array.from({ length: Math.floor(Math.random() * 112) }, () => Math.floor((Math.random() * 9) + 1)),
+    },    
 ];
 
 const createImgElement = (src, altTxt) => {
@@ -117,27 +167,29 @@ const buildListItem = (itemData) => {
     let img = createImgElement(itemData.img, itemData.imgAltTxt);
     let name = createLinkElement(itemData.pname, itemData.url);
     let stats = createStatsElement(itemData.ratings);
-
-    let shortDesc = document.createElement("span");
-    shortDesc.setAttribute("class", "product-desc")
-    shortDesc.innerText = itemData.shortDesc;
+    let shortDesc = createSpanElement(itemData.shortDesc, "product-desc-short");
+    let longDesc = createSpanElement(itemData.longDesc, "product-desc-long");
 
     li.appendChild(img);
     li.appendChild(name);
     li.appendChild(shortDesc);
+    li.appendChild(longDesc);
     li.appendChild(stats);
 
     return li;
 }
 
-const populateList = (articleClass) => {
+const populateList = (articleClass, products) => {
+    console.log(products);
     const articleElement = document.querySelector("#" + articleClass);
     const listElement = articleElement.querySelector(".product-list");
-    for (let i = 0; i < DATA.length; i++) {
-        let li = buildListItem(DATA[i]);
+    for (let i = 0; i < products.length; i++) {
+        let li = buildListItem(products[i]);
         listElement.appendChild(li);
     }
 }
 
-populateList("trending-products");
-populateList("new-products");
+// Just to randomize the order DATA array and make things interesting
+DATA.sort(() => Math.random() - 0.5);
+populateList("new-products", DATA.slice(0, 5));
+populateList("trending-products", DATA.slice(5, 10));
