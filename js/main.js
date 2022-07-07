@@ -1,35 +1,3 @@
-const createImgElement = (src, altTxt) => {
-    let img = document.createElement("img");
-    img.setAttribute("src", src);
-    img.setAttribute("alt", altTxt);
-    return img;
-}
-
-const createLinkElement = (txt, url) => {
-    let a = document.createElement("a");
-    a.setAttribute("href", url);
-    a.innerHTML = txt;
-    return a;
-}
-
-
-const buildListItem = (itemData) => {
-    let li = document.createElement("li");
-    let img = createImgElement(itemData.img, itemData.imgAltTxt);
-    let name = createLinkElement(itemData.pname, itemData.url);
-
-    let shortDesc = document.createElement("span");
-    shortDesc.setAttribute("class", "product-desc")
-    shortDesc.innerText = itemData.shortDesc;
-
-    li.appendChild(img);
-    li.appendChild(name);
-    li.appendChild(shortDesc);
-
-    console.log(li);
-
-}
-
 const DATA = [
     {
         "pid": 1,
@@ -53,8 +21,47 @@ const DATA = [
     }
 ];
 
-const TRENDING = document.querySelector("#trending-products");
-
-for (let i = 0; i < DATA.length; i++) {
-    buildListItem(DATA[i]);
+const createImgElement = (src, altTxt) => {
+    let img = document.createElement("img");
+    img.setAttribute("src", src);
+    img.setAttribute("alt", altTxt);
+    img.classList = "product-img"
+    return img;
 }
+
+const createLinkElement = (txt, url) => {
+    let a = document.createElement("a");
+    a.setAttribute("href", url);
+    a.innerHTML = txt;
+    return a;
+}
+
+const buildListItem = (itemData) => {
+    let li = document.createElement("li");
+    li.classList = "product-info";
+    
+    let img = createImgElement(itemData.img, itemData.imgAltTxt);
+    let name = createLinkElement(itemData.pname, itemData.url);
+
+    let shortDesc = document.createElement("span");
+    shortDesc.setAttribute("class", "product-desc")
+    shortDesc.innerText = itemData.shortDesc;
+
+    li.appendChild(img);
+    li.appendChild(name);
+    li.appendChild(shortDesc);
+
+    return li;
+}
+
+const populateTrending = () => {
+    const TRENDING = document.querySelector("#trending-products");
+    const LIST = TRENDING.querySelector(".product-list")
+    console.log(TRENDING, LIST);       
+    for (let i = 0; i < DATA.length; i++) {
+        let li = buildListItem(DATA[i]);
+        LIST.appendChild(li);
+    }
+}
+
+populateTrending();
