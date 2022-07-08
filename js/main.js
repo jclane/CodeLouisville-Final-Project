@@ -1,7 +1,8 @@
 const DATA = [
     {
         "pid": 1,
-        "pname": "Hidden Valley Original Ranch Salad Dressing & Topping",
+        "brand": "Hidden Valley",
+        "pname": "Original Ranch Salad Dressing & Topping",
         "img": ".\\img\\hidden_valley_og_ranch.jpeg",
         "imgAltTxt": "A 40 oz. bottle of Hidden Valley Original Ranch Salad Dressing & Topping.",
         "desc": `Put together a quick, easy dinner anytime when you use Hidden Valley Original Ranch Dressing. Our Original Ranch Dressing makes it simple to get your daily dose of veggies. For delicious side dishes, mix with pasta or potatoes. Or toss with mixed greens and chopped tomatoes for an easy meal. Hidden Valley ranch dressing also makes a tasty addition to sandwiches, wraps and burgers, or as a dip with a vegetable tray, chips, or chicken strips. This gluten-free creamy ranch dressing is as versatile as it is tasty. Kick up the flavor of your 4th of July meals with Ranch!
@@ -15,7 +16,8 @@ const DATA = [
     },
     {
         "pid": 2,
-        "pname": "Sweet Baby Ray's Original Barbecue Sauce",
+        "brand": "Sweet Baby Ray's",
+        "pname": "Original Barbecue Sauce",
         "img": ".\\img\\sweet_baby_rays_og_bbq_sauce.jpeg",
         "imgAltTxt": "A 40 oz. bottle of Sweet Baby Ray's Original Barbecue Sauce.",
         "desc": `The original, award-winning tangy-sweet pitmaster taste that started it all – and still a favorite of BBQ fans the world over. This deliciously thick sauce goes on great as a marinade or garnish and turns every kind of meat into a treat for the taste buds. Fantastic on ribs, pulled pork, chicken, burgers, brats, dogs, nuggets, even fries! The squeeze bottle makes it easier to put on everything you want. Get an extra bottle, so you don't run out.
@@ -29,7 +31,8 @@ const DATA = [
     },
     {
         "pid": 3,
-        "pname": "Mt. Olive Hamburger Dill Pickle Chips",
+        "brand": "Mt. Olive",
+        "pname": "Hamburger Dill Pickle Chips",
         "img": ".\\img\\mt_olive_hamburger_dill_pickle_chips.jpeg",
         "imgAltTxt": "A 16 fl. oz. jar of Mt. Olive Hamburger Dill Pickle Chips.",
         "desc": `These crunchy, refreshing Hamburger Dill Chips feature Mt. Olive’s traditional dill pickle flavor sliced to perfection for a classic tangy addition to your favorite burger! Packed with the savory flavor you crave, these Hamburger Dill Chips are perfect for cookouts and gatherings. For big dill taste that fits perfectly on your burger, grab a jar of Hamburger Dill Chips, and enjoy your favorite signature Mt. Olive flavor! Mt. Olive Pickle Co. has been making your favorite high-quality pickle products for nearly a century. Mt. Olive is proud to be the #1 best-selling brand of pickles, peppers and relishes in the United States. Our flavorful pickle goodness comes from the corner of Cucumber & Vine in our hometown in North Carolina. Upgrade your next burger with Hamburger Dill Chips for endless flavor!
@@ -43,7 +46,8 @@ const DATA = [
     },
     {
         "pid": 4,
-        "pname": "Heinz 57 Sauce",
+        "brand": "Heinz",
+        "pname": "57 Sauce",
         "img": ".\\img\\heinz_57_sauce.jpeg",
         "imgAltTxt": "A 20 oz. bottle of Heinz 57 Sauce.",
         "desc": `A secret blend of spices has made Heinz 57 Sauce an American favorite for over 100 years. With a unique rich flavor unequaled by any other steak sauce, it's no wonder that Heinz 57 is served in America's greatest steak houses. This multi use sauce comes ready to pour onto your favorite foods for a convenient way to ramp up flavor. Tomato puree, vinegar and spices create a zesty kick in this multi purpose sauce that contains 20 calories per serving and zero grams of fat per serving. It's the go-to steak dinner sauce, but Heinz 57 is also perfect as a sauce for pork or chicken, for meat marinating or as a dipping sauce. This 20-ounce bottle makes it easy to pour this zesty sauce.
@@ -58,7 +62,8 @@ const DATA = [
     },
     {
         "pid": 5,
-        "pname": "Tesco Smooth Peanut Butter",
+        "brand": "Tesco",
+        "pname": "Smooth Peanut Butter",
         "img": ".\\img\\tesco_smooth_peanut_butter.jpeg",
         "imgAltTxt": "A 340G jar of Tesco Smooth Penut Butter.",
         "desc": `CLASSIC RECIPE Roasted then blended for a smooth, rounded flavour`,
@@ -66,7 +71,8 @@ const DATA = [
     },
     {
         "pid": 6,
-        "pname": "De La Rosa Mazapan",
+        "brand": "De La Rosa",
+        "pname": "Mazapan",
         "img": ".\\img\\de_la_rosa_mazapan.jpeg",
         "imgAltTxt": "Various pieces of De La Rosa Mazapan candies.",
         "desc": `De La Rosa Mazapan peanut confections! These triple layer peanut marzipan candies are a delicious, round chewy candy made of crushed peanuts.`,
@@ -74,7 +80,8 @@ const DATA = [
     },
     {
         "pid": 7,
-        "pname": "HP Brown Sauce",
+        "brand": "HP",
+        "pname": "Brown Sauce",
         "img": ".\\img\\hp_brown_sauce.jpeg",
         "imgAltTxt": "A 425G bottle of HP Brown Sauce.",
         "desc": `HP Brown Sauce has a delicious, tangy flavour that will enhance any hot dog or bacon sandwich. If you are a fan of brown sauce then you can’t go far wrong with this classic sauce from the experts at HP.
@@ -86,7 +93,8 @@ const DATA = [
     },
     {
         "pid": 8,
-        "pname": "Miss Vickie's Sweet & Spicy Ketchup Kettle Cooked Chips",
+        "brand": "Miss Vickie's",
+        "pname": "Sweet & Spicy Ketchup Kettle Cooked Chips",
         "img": ".\\img\\miss_vickies_sweet_spicy_ketchup_chips.jpeg",
         "imgAltTxt": "A 190G/6.7OZ bag of Miss Vickie's Sweet & Spicy Ketchup Kettle Cooked Chips.",
         "desc": `Miss Vickie's Sweet & Spicy Ketchup flavor kettle-cooked potato chips are crafted to deliver a unique twist on the iconic Ketchup flavor. This flavor brings together the deliciousness of both Sweet And Spicy profiles to create an elevated snacking experience.`,
@@ -94,7 +102,8 @@ const DATA = [
     },
     {
         "pid": 9,
-        "pname": "Arnott's Tim Tam Chocolate Biscuits Double Coat",
+        "brand": "Arnott's",
+        "pname": "Tim Tam Chocolate Biscuits Double Coat",
         "img": ".\\img\\tim_tam_chocolate_biscuits_double_coat.jpeg",
         "imgAltTxt": "A 240G package of Arnott's Tim Tam Chocolate Biscuits Double Coat.",
         "desc": `Arnott's Tim Tam Double Coat Chocolate biscuits are made with irresistible real chocolate. The most irresistible chocolate biscuit. A mouth-watering combination of crunchy biscuit, creamy filling and real chocolate coating, it's easy to see why Tim Tams are Australia’s most-loved chocolate biscuit. Share a packet of these deliciously sweet biscuits with your friends and family today.
@@ -105,7 +114,8 @@ const DATA = [
     },
     {
         "pid": 10,
-        "pname": "Samyang Hot Chicken Flavor Ramen",
+        "brand": "Samyang",
+        "pname": "Hot Chicken Flavor Ramen",
         "img": ".\\img\\samyang_hot_chicken_flavor_ramen.jpeg",
         "imgAltTxt": "Cup of Samyang Hot Chicken Flavor Ramen.",
         "desc": `Delicious spicy chicken flavor, fried noodle with spicy seasoning in a cup from Korea.`,
@@ -163,10 +173,11 @@ function buildProductInfo(itemData) {
     let div = document.createElement("div");
     div.classList = "product-info";
 
+    let brand = createLinkElement(itemData.brand, "#");
     let name = createLinkElement(itemData.pname, itemData.url);
     let stats = createStatsElement(itemData.ratings);
     let desc = createSpanElement(itemData.desc, "product-desc");
-    [name, stats, desc].forEach((e) => div.appendChild(e))
+    [brand, name, stats, desc].forEach((e) => div.appendChild(e))
 
     return div;
 }
