@@ -196,8 +196,8 @@ function populateList(articleClass, products) {
     const articleElement = document.querySelector("#" + articleClass);
     const listElement = articleElement.querySelector(".product-list");
     for (let i = 0; i < products.length; i++) {
-        let li = buildListItem(products[i]);
-        listElement.appendChild(li);
+        let liElement = buildListItem(products[i]);
+        listElement.appendChild(liElement);
     }
 }
 
