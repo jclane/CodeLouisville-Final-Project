@@ -50,7 +50,6 @@ nav ul {
 
 .product {
     display: grid;
-    justify-content: start;
     align-items: center;
     height: 9em;
     grid-template-areas: "img pi";
