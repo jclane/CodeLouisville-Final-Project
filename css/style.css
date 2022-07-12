@@ -17,12 +17,14 @@ header {
     grid-column: 2;
 }
 
-.member-links {
-    justify-self: end;
+nav #main-menu {
+    display: none;
+    list-style-type: none;
+    padding: 0;
 }
 
-nav ul {
-    display: none;
+.member-links {
+    justify-self: end;
 }
 
 .lists-container {
