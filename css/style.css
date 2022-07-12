@@ -1,8 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap");
+
+:root {
+    --heading-font: "Archivo Narrow", "Verdana", sans-serif;
+    --default-font: "Arial", "Helvetica", sans-serif;
+    --teriary-color: ;
+}
+
 body {
     margin: 0;
     padding: 0;
     background: #000;
     color: #FFF;
+    font-family: var(--default-font);
 }
 
 header {
@@ -33,6 +42,7 @@ nav #main-menu {
 }
 
 .list-heading {
+    font-family: var(--heading-font);
     background: red;
     padding: .15em;
     margin: 1em .15em 0;
@@ -53,6 +63,8 @@ nav #main-menu {
 .product {
     display: grid;
     align-items: center;
+    background: #FFF;
+    color: #000;
     height: 9em;
     grid-template-areas: "img pi";
 }
@@ -72,6 +84,7 @@ nav #main-menu {
 
 .product-name {
     grid-area: pn;
+    font-family: var(--heading-font);
 }
 
 .product-desc {
@@ -87,6 +100,13 @@ nav #main-menu {
     display: flex;
     flex-flow: row wrap;
     grid-area: ps;
+}
+
+.product-highlight {
+    display: flex;
+    flex-flow: column wrap;
+    background: #FFF;
+    color: #000;
 }
 
 @media only screen and (min-width: 500px) {

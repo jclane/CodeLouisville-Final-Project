@@ -192,8 +192,8 @@ function buildListItem(itemData) {
     return li;
 }
 
-function populateList(articleClass, products) {
-    const articleElement = document.querySelector("#" + articleClass);
+function populateList(articleId, products) {
+    const articleElement = document.querySelector("#" + articleId);
     const listElement = articleElement.querySelector(".product-list");
     for (let i = 0; i < products.length; i++) {
         let liElement = buildListItem(products[i]);
@@ -205,6 +205,18 @@ function populateList(articleClass, products) {
 DATA.sort(() => Math.random() - 0.5);
 populateList("new-products", DATA.slice(0, 5));
 populateList("trending-products", DATA.slice(5, 10));
+
+
+function buildHotItem(articleId, product) {
+    const articleElement = document.querySelector("#" + articleId);
+    const div = articleElement.querySelector(".product-highlight");
+    const img = createImgElement(product.img, product.imgAltTxt);    
+    const stats = buildProductInfo(product);
+    [img, stats].forEach((e) => div.appendChild(e));
+}
+
+buildHotItem("hot-product", DATA[0]);
+
 
 // Hamburger menu stuff
 document.querySelector(".hamburger").addEventListener("click", (e) => {
