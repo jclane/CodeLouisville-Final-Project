@@ -173,11 +173,13 @@ function buildProductInfo(itemData) {
     let div = document.createElement("div");
     div.classList = "product-info";
 
+    let img = createImgElement(itemData.img, itemData.imgAltTxt);
     let brand = createLinkElement(itemData.brand, "#");
+    brand.classList = "product-brand";
     let name = createLinkElement(itemData.pname, itemData.url);
     let stats = createStatsElement(itemData.ratings);
     let desc = createSpanElement(itemData.desc, "product-desc");
-    [brand, name, stats, desc].forEach((e) => div.appendChild(e))
+    [img, brand, name, stats, desc].forEach((e) => div.appendChild(e))
 
     return div;
 }
@@ -186,7 +188,6 @@ function buildListItem(itemData) {
     let li = document.createElement("li");
     li.classList = "product";
 
-    li.appendChild(createImgElement(itemData.img, itemData.imgAltTxt));
     li.appendChild(buildProductInfo(itemData));
 
     return li;
@@ -202,21 +203,9 @@ function populateList(articleId, products) {
 }
 
 // Just to randomize the order of DATA and make things interesting
-DATA.sort(() => Math.random() - 0.5);
-populateList("new-products", DATA.slice(0, 5));
-populateList("trending-products", DATA.slice(5, 10));
-
-
-function buildHotItem(articleId, product) {
-    const articleElement = document.querySelector("#" + articleId);
-    const div = articleElement.querySelector(".product-highlight");
-    const img = createImgElement(product.img, product.imgAltTxt);    
-    const stats = buildProductInfo(product);
-    [img, stats].forEach((e) => div.appendChild(e));
-}
-
-buildHotItem("hot-product", DATA[0]);
-
+//DATA.sort(() => Math.random() - 0.5);
+//populateList("new-products", DATA.slice(0, 5));
+//populateList("trending-products", DATA.slice(5, 10));
 
 // Hamburger menu stuff
 document.querySelector(".hamburger").addEventListener("click", (e) => {

@@ -50,8 +50,10 @@ nav #main-menu {
 }
 
 .product-list {
-    display: flex;
-    flex-flow: column nowrap;
+    display: grid;
+    grid-template-areas: "img pn"
+                         "img ps"
+                          "";
     list-style: none;
     background: #FFF;
     color: #000;
@@ -65,6 +67,7 @@ nav #main-menu {
     align-items: center;
     background: #FFF;
     color: #000;
+    margin: 1rem 1rem 0 0;
     height: 9em;
     grid-template-areas: "img pi";
 }
@@ -78,8 +81,10 @@ nav #main-menu {
 
 .product-info {
     grid-area: pi;
-    display: flex;
-    flex-flow: column wrap;
+}
+
+.product-brand {
+    grid-area: pd;
 }
 
 .product-name {
@@ -89,16 +94,9 @@ nav #main-menu {
 
 .product-desc {
     grid-area: pd;
-    width: auto;
-    height: 1rem;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
 }
 
 .product-stats {
-    display: flex;
-    flex-flow: row wrap;
     grid-area: ps;
 }
 
