@@ -170,12 +170,12 @@ function buildProductInfo(itemData) {
    
     const productObj = {
         "Brand":createLinkElement(itemData.brand, "#", "product-brand"),
-        "Product":createLinkElement(itemData.pname, itemData.url),
+        "Item":createLinkElement(itemData.pname, itemData.url),
         "Avg. Rating":createLinkElement(getAvgRating(itemData.ratings))
     };
 
     Object.entries(productObj).forEach(e => {
-        const span = createSpanElement(`${e[0]}:`, "label");
+        const span = createSpanElement(`${e[0]}:`, "inline-container");
         span.appendChild(e[1]);
         div.appendChild(span)
     });

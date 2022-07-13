@@ -88,6 +88,10 @@ nav #main-menu {
     grid-area: ps;
 }
 
+.inline-container {
+    display: flex;
+}
+
 @media only screen and (min-width: 500px) {
     .lists-container {
         display: flex;
