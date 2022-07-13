@@ -202,6 +202,7 @@ DATA.sort(() => Math.random() - 0.5);
 populateList("new-products", DATA.slice(0, 5));
 populateList("trending-products", DATA.slice(5, 10));
 
+
 // Hamburger menu stuff
 document.querySelector(".hamburger").addEventListener("click", (e) => {
     let menu = document.querySelector("#main-menu");
