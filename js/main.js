@@ -153,8 +153,7 @@ function createStatsElement(ratings) {
     div.classList = "product-stats";
 
     let avgRatingSpan = createSpanElement("Avg. Rating: ", "product-avgrating")
-    let avgRating = createLinkElement(`${avg.toFixed(1)} (${sum.toLocaleString("en-US")})`, "#")
-    
+    let avgRating = createLinkElement(`${avg.toFixed(1)} (${sum.toLocaleString("en-US")})`, "#") 
     avgRatingSpan.appendChild(avgRating);
     div.appendChild(avgRatingSpan);
 
@@ -178,18 +177,14 @@ function buildProductInfo(itemData) {
     brand.classList = "product-brand";
     let name = createLinkElement(itemData.pname, itemData.url);
     let stats = createStatsElement(itemData.ratings);
-    let desc = createSpanElement(itemData.desc, "product-desc");
-    [img, brand, name, stats, desc].forEach((e) => div.appendChild(e))
-
+    [img, brand, name, stats].forEach((e) => div.appendChild(e))
     return div;
 }
 
 function buildListItem(itemData) {
     let li = document.createElement("li");
     li.classList = "product";
-
     li.appendChild(buildProductInfo(itemData));
-
     return li;
 }
 
@@ -205,7 +200,7 @@ function populateList(articleId, products) {
 // Just to randomize the order of DATA and make things interesting
 //DATA.sort(() => Math.random() - 0.5);
 //populateList("new-products", DATA.slice(0, 5));
-//populateList("trending-products", DATA.slice(5, 10));
+populateList("trending-products", DATA.slice(5, 10));
 
 // Hamburger menu stuff
 document.querySelector(".hamburger").addEventListener("click", (e) => {

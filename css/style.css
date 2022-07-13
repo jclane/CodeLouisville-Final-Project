@@ -53,10 +53,11 @@ nav #main-menu {
     margin: 0 .25em .25em;
 }
 
-.product-list li {
+.product-list .product .product-info {
     display: grid;
-    grid-template-areas: "img pd pn"
-                         ""
+    grid-template-areas: "img pb"
+                         "img pn"
+                         "img ps";
 }
 
 .product-img {
@@ -67,13 +68,18 @@ nav #main-menu {
 }
 
 .product-brand {
-    grid-area: pd;
+    grid-area: pb;
     font-family: var(--heading-font);
 }
 
 .product-name {
     grid-area: pn;
     font-family: var(--heading-font);
+}
+
+.product-stats {
+    grid-area: ps;
+    font-family: var(--default-font);
 }
 
 @media only screen and (min-width: 500px) {
