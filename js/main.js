@@ -151,7 +151,7 @@ function createStatsElement(ratings) {
 
     let div = document.createElement("div");
     div.classList = "product-stats";
-
+    
     let avgRatingSpan = createSpanElement("Avg. Rating: ", "product-avgrating")
     let avgRating = createLinkElement(`${avg.toFixed(1)} (${sum.toLocaleString("en-US")})`, "#") 
     avgRatingSpan.appendChild(avgRating);
