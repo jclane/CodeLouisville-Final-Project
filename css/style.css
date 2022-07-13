@@ -42,7 +42,6 @@ nav #main-menu {
     padding: .35em;
     margin: 1em .15em 0;
     border-radius: 15px 15px 0 0;
-
 }
 
 .product-list {
@@ -93,8 +92,13 @@ nav #main-menu {
 }
 
 @media only screen and (min-width: 500px) {
-    .lists-container {
+    .container {
         display: flex;
         flex-flow: row nowrap;
-    }    
+        justify-content: center;
+    }
+
+    .product-list {
+        flex: 1;
+    }
 }
