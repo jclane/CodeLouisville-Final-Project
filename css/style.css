@@ -15,7 +15,6 @@ body {
 }
 
 header {
-    display: grid;
     border: 1px solid #000;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
@@ -26,10 +25,16 @@ header {
     grid-column: 2;
 }
 
+.navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
 nav #main-menu {
     display: none;
     list-style-type: none;
     padding: 0;
+    left: -5em;
 }
 
 .nav-link {
@@ -43,8 +48,9 @@ nav #main-menu {
     background: yellow;
 }
 
-.member-links {
-    justify-self: end;
+nav .member-links {
+    float: right;
+    background: red;
 }
 
 .list-container {
