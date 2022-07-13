@@ -131,9 +131,10 @@ function createImgElement (src, altTxt) {
     return img;
 }
 
-function createLinkElement(txt, url) {
+function createLinkElement(txt, url, classList="") {
     let a = document.createElement("a");
     a.setAttribute("href", url);
+    a.classList = classList;
     a.innerHTML = txt;
     return a;
 }
@@ -145,19 +146,11 @@ function createSpanElement(txt, classList) {
     return span;
 }
 
-function createStatsElement(ratings) {
+function getAvgRating(ratings) {
     const sum = ratings.length ? ratings.reduce((a, b) => {return a+b}) : 0;
     const avg =  sum ? sum / ratings.length : 0.0;
-
-    let div = document.createElement("div");
-    div.classList = "product-stats";
-    
-    let avgRatingSpan = createSpanElement("Avg. Rating: ", "product-avgrating")
-    let avgRating = createLinkElement(`${avg.toFixed(1)} (${sum.toLocaleString("en-US")})`, "#") 
-    avgRatingSpan.appendChild(avgRating);
-    div.appendChild(avgRatingSpan);
-
-    return div;
+    let avgRating = `${avg.toFixed(1)} (${sum.toLocaleString("en-US")})`;
+    return avgRating;
 }
 
 // Might not need this, delete if not used.
@@ -173,11 +166,19 @@ function buildProductInfo(itemData) {
     div.classList = "product-info";
 
     let img = createImgElement(itemData.img, itemData.imgAltTxt);
-    let brand = createLinkElement(itemData.brand, "#");
-    brand.classList = "product-brand";
-    let name = createLinkElement(itemData.pname, itemData.url);
-    let stats = createStatsElement(itemData.ratings);
-    [img, brand, name, stats].forEach((e) => div.appendChild(e))
+    div.appendChild(img);
+   
+    const productObj = {
+        "Brand":createLinkElement(itemData.brand, "#", "product-brand"),
+        "Product":createLinkElement(itemData.pname, itemData.url),
+        "Avg. Rating":createLinkElement(getAvgRating(itemData.ratings))
+    };
+
+    Object.entries(productObj).forEach(e => {
+        const span = createSpanElement(`${e[0]}:`, "label");
+        span.appendChild(e[1]);
+        div.appendChild(span)
+    });
     return div;
 }
 
@@ -197,9 +198,8 @@ function populateList(articleId, products) {
     }
 }
 
-// Just to randomize the order of DATA and make things interesting
-//DATA.sort(() => Math.random() - 0.5);
-//populateList("new-products", DATA.slice(0, 5));
+DATA.sort(() => Math.random() - 0.5);
+populateList("new-products", DATA.slice(0, 5));
 populateList("trending-products", DATA.slice(5, 10));
 
 // Hamburger menu stuff
