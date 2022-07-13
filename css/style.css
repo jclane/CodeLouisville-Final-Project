@@ -32,6 +32,17 @@ nav #main-menu {
     padding: 0;
 }
 
+.nav-link {
+    text-decoration: none;
+    background: grey;
+    color: yellow;
+}
+
+.nav-link:hover {
+    color: grey;
+    background: yellow;
+}
+
 .member-links {
     justify-self: end;
 }
@@ -95,7 +106,27 @@ nav #main-menu {
     display: flex;
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 481px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav .hamburger {
+        display: none;
+    }
+
+    nav #main-menu {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .nav-link {
+        padding: 1em;
+    }
+
     .container {
         display: flex;
         flex-flow: row nowrap;
@@ -106,4 +137,7 @@ nav #main-menu {
         flex: 1;
         align-items: stretch;
     }
+}
+
+@media only screen and (min-width: 768px) {
 }
