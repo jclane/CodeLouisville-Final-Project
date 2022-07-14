@@ -116,12 +116,12 @@ nav #main-menu {
 
     header {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
     }
 
     .navigation {
-        display: flex;
-        flex-flow: row wrap;
+        display: grid;
+        grid-template-rows: min-content;
     }
 
     nav .hamburger {
