@@ -125,6 +125,7 @@ nav .member-links {
 
     nav #main-menu {
         display: flex;
+        flex-flow: row nowrap;
         list-style-type: none;
         padding: 0;
     }
