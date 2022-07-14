@@ -7,7 +7,7 @@
     --grey: rgb(229, 226, 232);
     --light-blue: rgb(101, 147, 219);
     --vlight-blue: rgb(124, 164, 220);
-    --dark-blue: rgb(11, 47, 99);
+    --dark-blue: rgb(15, 65, 134);
     --yellow: rgb(255, 255, 0);
     --white: rgb(255, 255, 255);
 }
@@ -78,7 +78,8 @@ nav #main-menu {
     font-family: var(--default-font);
     border: 1px solid var(--light-blue);
     border-radius: 15px;
-    margin: .5em
+    margin: .75em;
+    box-shadow: .25em .50em 1em var(--dark-blue);
 }
 
 .container-heading {
