@@ -1,4 +1,4 @@
-const DATA = [
+const PRODUCTS = [
     {
         "pid": 1,
         "brand": "Hidden Valley",
@@ -198,10 +198,9 @@ function populateList(articleId, products) {
     }
 }
 
-DATA.sort(() => Math.random() - 0.5);
-populateList("new-products", DATA.slice(0, 5));
-populateList("trending-products", DATA.slice(5, 10));
-
+PRODUCTS.sort(() => Math.random() - 0.5);
+populateList("new-products", PRODUCTS.slice(0, 5));
+populateList("trending-products", PRODUCTS.slice(5, 10));
 
 // Hamburger menu stuff
 document.querySelector(".hamburger").addEventListener("click", (e) => {
@@ -215,3 +214,18 @@ document.querySelector(".hamburger").addEventListener("click", (e) => {
     menu.style.display = newSetting;
 });
 
+// 'News' posts from reddit fetcher
+function getRedditPosts(subReddit) {
+    const url = `https://www.reddit.com/r/${subReddit}.json`;
+    let data = [];
+    fetch(url).then(res => {
+                        if (res.ok) {
+                            res.json()
+                        } else {
+                            throw Error("Failed to import reddit posts.");
+                        }
+                    })
+                    .then(jsonData => console.log(jsonData));
+}
+
+getRedditPosts("GroceryStores");
