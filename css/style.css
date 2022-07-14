@@ -36,11 +36,32 @@ header {
 
 .nav-link {
     text-decoration: none;
-    color: yellow;
+    color: var(--vlight-blue);
 }
 
 .nav-link:hover {
-    background: yellow;
+    color: var(--vlight-blue);
+}
+
+.hamburger div {
+    width: 1em;
+    height: .15em;
+    position: relative;
+    background: white;
+    left: .85em;
+    border-radius: 15px;
+}
+
+.hamburger div:nth-child(1) {
+    top: 0;
+}
+
+.hamburger div:nth-child(2) {
+    top: 2.5px;
+}
+
+.hamburger div:nth-child(3) {
+    top: 5px;
 }
 
 nav #main-menu {
