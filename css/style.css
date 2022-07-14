@@ -30,20 +30,6 @@ header {
     grid-column: 2;
 }
 
-.navigation {
-    display: flex;
-    justify-content: space-between;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: var(--vlight-blue);
-}
-
-.nav-link:hover {
-    color: var(--vlight-blue);
-}
-
 .hamburger div {
     width: 1em;
     height: .10rem;
@@ -65,6 +51,21 @@ header {
 
 .open div:nth-child(3)  {
     transform: rotate(-45deg) translate(3px, -1px);
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link {
+    text-decoration: none;
+    width: 100%;
+    color: var(--vlight-blue);
+}
+
+.nav-link:hover {
+    color: var(--yellow);
 }
 
 nav #main-menu {
