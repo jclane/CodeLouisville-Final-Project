@@ -3,7 +3,7 @@
 :root {
     --heading-font: "Archivo Narrow", "Verdana", sans-serif;
     --default-font: "Arial", "Helvetica", sans-serif;
-    --teriary-color: ;
+    --logo-blue: rgb(16, 96, 211);
 }
 
 body {
@@ -48,7 +48,7 @@ nav #main-menu {
     background: yellow;
 }
 
-nav .member-links {
+.member-links {
     float: right;
     background: red;
 }
@@ -119,19 +119,28 @@ nav .member-links {
         justify-content: space-between;
     }
 
+    .navigation {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
     nav .hamburger {
         display: none;
     }
 
     nav #main-menu {
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         list-style-type: none;
         padding: 0;
     }
 
     .nav-link {
         padding: 1em;
+    }
+
+    .member-links {
+        align-self: flex-end;
     }
 
     .container {
