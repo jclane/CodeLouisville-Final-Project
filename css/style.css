@@ -78,7 +78,7 @@ nav #main-menu {
     grid-template-areas: "img pb"
                          "img pn"
                          "img ps";
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--grey);
     padding: 1em 0 1em 0;
 }
 
