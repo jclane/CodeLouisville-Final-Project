@@ -4,12 +4,16 @@
     --heading-font: "Archivo Narrow", "Verdana", sans-serif;
     --default-font: "Arial", "Helvetica", sans-serif;
     --logo-blue: rgb(16, 96, 211);
+    --grey: rgb(229, 226, 232);
+    --light-blue: rgb(101, 147, 219);
+    --vlight-blue: rgb(124, 164, 220);
+    
 }
 
 body {
     margin: 0;
     padding: 0;
-    background: #000;
+    background: var(--logo-blue);
     color: #FFF;
     font-family: var(--default-font);
 }
@@ -50,7 +54,6 @@ nav #main-menu {
 
 .member-links {
     float: right;
-    background: red;
 }
 
 .list-container {
@@ -63,7 +66,8 @@ nav #main-menu {
 
 .container-heading {
     font-family: var(--heading-font);
-    background: red;
+    background: var(--dark-blue);
+    color: white;
     padding: .35em;
     margin: 0;
     border-radius: 15px 15px 0 0;
