@@ -45,22 +45,25 @@ header {
 
 .hamburger div {
     width: 1em;
-    height: .15em;
+    height: .10rem;
     position: relative;
     background: white;
-    left: .85em;
+    left: .5rem;
+    margin: .15rem;
+    transition: 0.4s;
+    cursor: pointer;
 }
 
-.hamburger div:nth-child(1) {
-    top: 0;
+.open div:nth-child(1)  {
+    transform: rotate(45deg) translate(5px, 2px);
 }
 
-.hamburger div:nth-child(2) {
-    top: .15rem;
+.open div:nth-child(2)  {
+    opacity: 0;
 }
 
-.hamburger div:nth-child(3) {
-    top: .30rem;
+.open div:nth-child(3)  {
+    transform: rotate(-45deg) translate(3px, -1px);
 }
 
 nav #main-menu {
