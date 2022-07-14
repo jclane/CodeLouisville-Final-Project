@@ -49,7 +49,6 @@ header {
     position: relative;
     background: white;
     left: .85em;
-    border-radius: 15px;
 }
 
 .hamburger div:nth-child(1) {
