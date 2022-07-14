@@ -10,17 +10,15 @@
     
 }
 
-body {
+html, body {
     margin: 0;
     padding: 0;
-    background: var(--logo-blue);
-    color: #FFF;
+    background: #FFF;
     font-family: var(--default-font);
 }
 
 header {
     background: var(--logo-blue);
-    border: 1px solid #000;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     justify-content: center;
@@ -44,19 +42,12 @@ nav #main-menu {
 
 .nav-link {
     text-decoration: none;
-    background: grey;
     color: yellow;
 }
 
 .nav-link:hover {
     background: yellow;
 }
-
-.member-links {
-    float: right;
-}
-
-
 
 .list-container {
     background: rgb(255, 255, 255);
