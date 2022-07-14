@@ -34,13 +34,6 @@ header {
     justify-content: space-between;
 }
 
-nav #main-menu {
-    display: none;
-    list-style-type: none;
-    padding: 0;
-    left: -5em;
-}
-
 .nav-link {
     text-decoration: none;
     color: yellow;
@@ -48,6 +41,13 @@ nav #main-menu {
 
 .nav-link:hover {
     background: yellow;
+}
+
+nav #main-menu {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    left: -5em;
 }
 
 .list-container {
