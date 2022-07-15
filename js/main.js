@@ -207,9 +207,6 @@ function getImgUrl(post) {
 }
 
 function parseRedditPost(post) {
-    if (post.data.is_reddit_media_domain) {
-        //console.log(post.data.title)
-    }
     const thumbnailUrl = post.data.is_reddit_media_domain ? getImgUrl(post.data) : false
     const parsedObj = {
         title:post.data.title,

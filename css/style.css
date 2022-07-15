@@ -138,6 +138,16 @@ nav #main-menu {
     display: flex;
 }
 
+.list .forum-topic {
+    display: flex;
+}
+
+.list .forum-topic img {
+    height: 10em;
+    width: auto;
+}
+
+
 @media only screen and (min-width: 712px) {
 
     header {
