@@ -1,7 +1,9 @@
 # SPORK.me
 
 ## Description
-SPORK.me is a site for reviewing and ranking grocery store items. Users would (theoretically) be able to visit the site to find reviews for their favorite foods and (hopefully) discover new ones! New foods could be added with users later adding their own product photos and reviews. Additionally, a forum would be present on the site for the users to discuss--food and stuff. Some form of social media interactions (following users, being "friends") would also be present.
+SPORK.me is a site for reviewing and ranking grocery store items. Users would (theoretically) be able to visit the site to find reviews for their favorite foods and (hopefully) discover new ones! New foods could be added with users later adding their own product photos and reviews. Additionally, a forum would be present on the site for the users to discuss--food and stuff. Some form of social media interactions (following users, being "friends") would also be present. That's how it would work anyway. 
+
+What it actually is--is just the front page for a site like that. It pulls some hardcoded product data and dynamically adds that data to two lists. One being "Trending Products", which if the site was real would be products that a majority of users are interacting with over the span of a day/week/month/whatever. The other product list would be "New Products", which would be the most recent items added to the (currently non-existent) database. Towards the bottom of the page you would find currently trending forum topics (currently these are being stolen from the [r/GroceryStores](https://www.reddit.com/r/GroceryStores/) subreddit).
 
 ## Features Included
 
