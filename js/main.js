@@ -213,14 +213,13 @@ function getImgUrl(post) {
 }
 
 function parseRedditPost(post) {
-    const thumbnailUrl = post.data.is_reddit_media_domain ? getImgUrl(post.data) : false
+    const thumbnailUrl = post.is_reddit_media_domain ? post.url : false
     const parsedObj = {
-        title:post.data.title,
-        postUrl:`https://wwww.reddit.com/${post.data.permalink}`,
-        img:getImgUrl(post.data),
+        title:post.title,
+        url:`https://www.reddit.com${post.permalink}`,
         thumbnailUrl: thumbnailUrl,
     }
-    console.log(parsedObj);
+    console.log(parsedObj.url);
     return parsedObj;
 }
 
@@ -244,7 +243,7 @@ async function addForumTopics(subReddit) {
     const res = await fetch(url).then(res => res.json())
                                 .then(data => data.data.children)
                                 .then(posts => {return posts});
-    res.forEach(p => addForumTopic(parseRedditPost(p)));
+    res.forEach(p => addForumTopic(parseRedditPost(p.data)));
 }
 
 addForumTopics("GroceryStores")
