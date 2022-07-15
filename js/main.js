@@ -206,7 +206,8 @@ function addForumTopic(title, url) {
     const article = document.querySelector("#forum-topics");
     const list = article.querySelector(".list");
     const li = document.createElement("li");
-    li.appendChild(createLinkElement(title, url));
+    li.classList = "forum-topic";
+    li.appendChild(createLinkElement(title, url, "topic-info"));
     list.appendChild(li);
 }
 

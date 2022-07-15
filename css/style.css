@@ -108,7 +108,12 @@ nav #main-menu {
     padding: 1em 0 1em 0;
 }
 
-.list :last-child .product-info {
+.list .forum-topic {
+    border-bottom: 1px solid var(--grey);
+    padding: 1em 0 1em 0;
+}
+
+.list :last-child .product-info, .list :last-child .forum-topic {
     border-bottom: none;
 }
 
