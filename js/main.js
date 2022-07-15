@@ -202,6 +202,12 @@ PRODUCTS.sort(() => Math.random() - 0.5);
 populateList("new-products", PRODUCTS.slice(0, 5));
 populateList("trending-products", PRODUCTS.slice(5, 10));
 
+function createImgSeperator() {
+    const div = document.createElement("div");
+    div.classList = "img-seperator";
+    return div;
+}
+
 function getImgUrl(post) {
     return post.url;
 }
@@ -227,6 +233,7 @@ function addForumTopic(post) {
     if (post.thumbnailUrl) {
         const thumbnail = createImgElement(post.thumbnailUrl, "");
         li.appendChild(thumbnail);
+        li.appendChild(createImgSeperator());
     }
     li.appendChild(a);
     list.appendChild(li);
