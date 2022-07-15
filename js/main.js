@@ -207,7 +207,6 @@ function parseRedditPost(post) {
         url:`https://www.reddit.com${post.permalink}`,
         thumbnailUrl: thumbnailUrl,
     }
-    console.log(parsedObj.url);
     return parsedObj;
 }
 
