@@ -115,9 +115,9 @@ nav #main-menu {
 
 .product-img {
     grid-area: img;
-    width: 50%;
+    width: 10em;
     height: auto;
-    margin: 1em 0 1em 0;
+    margin-bottom: 1em;
 }
 
 .product-brand {
@@ -197,4 +197,17 @@ nav #main-menu {
 }
 
 @media only screen and (min-width: 768px) {
+    .list .product .product-info {
+        display: grid;
+        justify-content: start;;
+        grid-template-areas: "img pb"
+                             "img pn"
+                             "img ps";    
+    }
+
+    .product-img {
+        width: 5em;
+        margin-left: 1em;
+        margin-bottom: 0;
+    }
 }
