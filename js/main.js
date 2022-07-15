@@ -202,21 +202,45 @@ PRODUCTS.sort(() => Math.random() - 0.5);
 populateList("new-products", PRODUCTS.slice(0, 5));
 populateList("trending-products", PRODUCTS.slice(5, 10));
 
-function addForumTopic(title, url) {
+function getImgUrl(post) {
+    return post.url;
+}
+
+function parseRedditPost(post) {
+    if (post.data.is_reddit_media_domain) {
+        //console.log(post.data.title)
+    }
+    const thumbnailUrl = post.data.is_reddit_media_domain ? getImgUrl(post.data) : false
+    const parsedObj = {
+        title:post.data.title,
+        postUrl:`https://wwww.reddit.com/${post.data.permalink}`,
+        img:getImgUrl(post.data),
+        thumbnailUrl: thumbnailUrl,
+    }
+    console.log(parsedObj);
+    return parsedObj;
+}
+
+function addForumTopic(post) {
     const article = document.querySelector("#forum-topics");
     const list = article.querySelector(".list");
     const li = document.createElement("li");
     li.classList = "forum-topic";
-    li.appendChild(createLinkElement(title, url, "topic-info"));
+    const a = createLinkElement(post.title, post.url, "topic-info")
+    if (post.thumbnailUrl) {
+        const thumbnail = createImgElement(post.thumbnailUrl, "");
+        li.appendChild(thumbnail);
+    }
+    li.appendChild(a);
     list.appendChild(li);
 }
 
 async function addForumTopics(subReddit) {
-    const url = `https://www.reddit.com/r/${subReddit}.json`;
+    const url = `https://www.reddit.com/r/${subReddit}/hot/.json`;
     const res = await fetch(url).then(res => res.json())
                                 .then(data => data.data.children)
                                 .then(posts => {return posts});
-    res.forEach(p => addForumTopic(p.data.title, p.data.url));
+    res.forEach(p => addForumTopic(parseRedditPost(p)));
 }
 
 addForumTopics("GroceryStores")

@@ -97,6 +97,15 @@ nav #main-menu {
     padding: .5em;
 }
 
+.list .product, .list .forum-topic {
+    border-bottom: 1px solid var(--grey);
+    padding: 1em 0 1em 0;
+}
+
+.list :last-child {
+    border-bottom: none;
+}
+
 .list .product .product-info {
     display: grid;
     justify-content: start;
@@ -104,17 +113,6 @@ nav #main-menu {
     grid-template-areas: "img pb"
                          "img pn"
                          "img ps";
-    border-bottom: 1px solid var(--grey);
-    padding: 1em 0 1em 0;
-}
-
-.list .forum-topic {
-    border-bottom: 1px solid var(--grey);
-    padding: 1em 0 1em 0;
-}
-
-.list :last-child .product-info, .list :last-child .forum-topic {
-    border-bottom: none;
 }
 
 .product-img {
