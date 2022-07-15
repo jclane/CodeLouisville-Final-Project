@@ -153,14 +153,6 @@ function getAvgRating(ratings) {
     return avgRating;
 }
 
-// Might not need this, delete if not used.
-function createParagraphElement(txt, classList) {
-    let p = document.createElement("span");
-    p.innerText = txt;
-    p.classList = classList;
-    return p;
-}
-
 function buildProductInfo(itemData) {
     let div = document.createElement("div");
     div.classList = "product-info";
@@ -208,10 +200,6 @@ function createImgSeperator() {
     return div;
 }
 
-function getImgUrl(post) {
-    return post.url;
-}
-
 function parseRedditPost(post) {
     const thumbnailUrl = post.is_reddit_media_domain ? post.url : false
     const parsedObj = {
@@ -223,7 +211,7 @@ function parseRedditPost(post) {
     return parsedObj;
 }
 
-function addForumTopic(post) {
+function buildForumTopic(post) {
     const article = document.querySelector("#forum-topics");
     const list = article.querySelector(".list");
     const li = document.createElement("li");
@@ -243,7 +231,7 @@ async function addForumTopics(subReddit) {
     const res = await fetch(url).then(res => res.json())
                                 .then(data => data.data.children)
                                 .then(posts => {return posts});
-    res.forEach(p => addForumTopic(parseRedditPost(p.data)));
+    res.forEach(p => buildForumTopic(parseRedditPost(p.data)));
 }
 
 addForumTopics("GroceryStores")
