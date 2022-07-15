@@ -92,12 +92,12 @@ nav #main-menu {
     border-radius: 15px 15px 0 0;
 }
 
-.product-list {
+.list {
     list-style: none;
     padding: .5em;
 }
 
-.product-list .product .product-info {
+.list .product .product-info {
     display: grid;
     justify-content: start;
     align-items: center;
@@ -108,7 +108,7 @@ nav #main-menu {
     padding: 1em 0 1em 0;
 }
 
-.product-list :last-child .product-info {
+.list :last-child .product-info {
     border-bottom: none;
 }
 
