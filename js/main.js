@@ -156,9 +156,7 @@ function getAvgRating(ratings) {
 function buildProductInfo(itemData) {
     let div = document.createElement("div");
     div.classList = "product-info";
-
-    let img = createImgElement(itemData.img, itemData.imgAltTxt);
-    div.appendChild(img);
+    div.appendChild(createImgElement(itemData.img, itemData.imgAltTxt));
    
     const productObj = {
         "Brand":createLinkElement(itemData.brand, "#", "product-brand"),
