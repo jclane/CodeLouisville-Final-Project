@@ -189,11 +189,11 @@ function buildListItem(itemData) {
     return li;
 }
 
-function populateList(articleId, products) {
+function populateList(articleId, data) {
     const articleElement = document.querySelector("#" + articleId);
-    const listElement = articleElement.querySelector(".product-list");
-    for (let i = 0; i < products.length; i++) {
-        let liElement = buildListItem(products[i]);
+    const listElement = articleElement.querySelector(".list");
+    for (let i = 0; i < data.length; i++) {
+        let liElement = buildListItem(data[i]);
         listElement.appendChild(liElement);
     }
 }
@@ -202,30 +202,30 @@ PRODUCTS.sort(() => Math.random() - 0.5);
 populateList("new-products", PRODUCTS.slice(0, 5));
 populateList("trending-products", PRODUCTS.slice(5, 10));
 
+function addForumTopic(title, url) {
+    const article = document.querySelector("#forum-topics");
+    const list = article.querySelector(".list");
+    const li = document.createElement("li");
+    li.appendChild(createLinkElement(title, url));
+    list.appendChild(li);
+}
+
+async function addForumTopics(subReddit) {
+    const url = `https://www.reddit.com/r/${subReddit}.json`;
+    const res = await fetch(url).then(res => res.json())
+                                .then(data => data.data.children)
+                                .then(posts => {return posts});
+    res.forEach(p => addForumTopic(p.data.title, p.data.url));
+}
+
+addForumTopics("GroceryStores")
+
 // Hamburger menu stuff
 document.querySelector(".hamburger").addEventListener("click", (e) => {
     let hamburger = document.querySelector(".hamburger");
-    console.log(hamburger);
     hamburger.classList.toggle("open");
-
     let menu = document.querySelector("#main-menu");
     const currSetting = menu.style.display;
     const newSetting = currSetting == "none" || currSetting == "" ? "block" : "none";
     menu.style.display = newSetting;
 });
-
-// 'News' posts from reddit fetcher
-function getRedditPosts(subReddit) {
-    const url = `https://www.reddit.com/r/${subReddit}.json`;
-    let data = [];
-    fetch(url).then(res => {
-                        if (res.ok) {
-                            res.json()
-                        } else {
-                            throw Error("Failed to import reddit posts.");
-                        }
-                    })
-                    .then(jsonData => console.log(jsonData));
-}
-
-getRedditPosts("GroceryStores");
