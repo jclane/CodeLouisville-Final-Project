@@ -4,12 +4,12 @@
     --heading-font: "Archivo Narrow", "Verdana", sans-serif;
     --default-font: "Arial", "Helvetica", sans-serif;
     --main-color: rgb(16, 96, 211);
-    --grey: rgb(229, 226, 232);
     --secondary-color: rgb(101, 147, 219);
     --tertiary-color: rgb(124, 164, 220);
     --dark-blue: rgb(15, 65, 134);
     --yellow: rgb(255, 255, 0);
     --white: rgb(255, 255, 255);
+    --grey: rgb(229, 226, 232);
     --black: rgb(0, 0, 0);
 }
 
@@ -100,7 +100,15 @@ nav #main-menu {
     padding: .5em;
 }
 
-.list .product, .list .forum-topic {
+.list li a {
+    text-decoration: none;
+}
+
+.list li a:hover {
+    text-decoration: underline;
+}
+
+.list .product, .list .forum-topic, footer .list li {
     border-bottom: 1px solid var(--grey);
     padding: 1em 0 1em 0;
 }
@@ -154,6 +162,32 @@ nav #main-menu {
     width: .1em;
     background: var(--grey);
     margin: 0 .5em;
+}
+
+footer .container {
+    background: var(--secondary-color);
+    margin: 1em;
+    padding: 1em;
+    border-radius: 15px;
+    color: var(--white);
+}
+
+footer .list-container .container-heading {
+    color: var(--secondary-color);
+    background: var(--white);
+}
+
+footer .list-container {
+    background: var(--tertiary-color);
+    color: var(--black);
+}
+
+footer a {
+    color: var(--black);
+}
+
+footer a:hover {
+    color: var(--yellow);
 }
 
 @media only screen and (min-width: 712px) {
