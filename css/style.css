@@ -3,13 +3,14 @@
 :root {
     --heading-font: "Archivo Narrow", "Verdana", sans-serif;
     --default-font: "Arial", "Helvetica", sans-serif;
-    --logo-blue: rgb(16, 96, 211);
+    --main-color: rgb(16, 96, 211);
     --grey: rgb(229, 226, 232);
-    --light-blue: rgb(101, 147, 219);
-    --vlight-blue: rgb(124, 164, 220);
+    --secondary-color: rgb(101, 147, 219);
+    --tertiary-color: rgb(124, 164, 220);
     --dark-blue: rgb(15, 65, 134);
     --yellow: rgb(255, 255, 0);
     --white: rgb(255, 255, 255);
+    --black: rgb(0, 0, 0);
 }
 
 html, body {
@@ -20,10 +21,11 @@ html, body {
 }
 
 header {
-    background: var(--logo-blue);
+    background: var(--main-color);
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     justify-content: center;
+    box-shadow: 0 .25em 1em #000;
 }
 
 .logo {
@@ -61,7 +63,7 @@ header {
 .nav-link {
     text-decoration: none;
     width: 100%;
-    color: var(--vlight-blue);
+    color: var(--white);
 }
 
 .nav-link:hover {
@@ -77,16 +79,16 @@ nav #main-menu {
 
 .list-container {
     font-family: var(--default-font);
-    border: 1px solid var(--light-blue);
+    border: 1px solid var(--secondary-color);
     border-radius: 15px;
     margin: .75em;
-    box-shadow: .25em .50em 1em var(--dark-blue);
+    box-shadow: .25em .50em 1em var(--black);
 }
 
 .container-heading {
     font-family: var(--heading-font);
-    background: var(--light-blue);
-    color: var(--dark-blue);
+    background: var(--secondary-color);
+    color: var(--white);
     padding: .35em;
     margin: 0;
     border-radius: 15px 15px 0 0;
@@ -142,7 +144,7 @@ nav #main-menu {
 }
 
 .list .forum-topic img {
-    height: 10em;
+    height: 8em;
     width: auto;
 }
 
@@ -150,7 +152,7 @@ nav #main-menu {
     height: 8.5em;
     width: .1em;
     background: var(--grey);
-    margin-right: 1em;
+    margin: 0 .5em;
 }
 
 @media only screen and (min-width: 712px) {
