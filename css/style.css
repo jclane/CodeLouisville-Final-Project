@@ -74,7 +74,8 @@ nav #main-menu {
     display: none;
     list-style-type: none;
     padding: 0;
-    left: -5em;
+    width: 100%;
+    background: red;
 }
 
 .list-container {
