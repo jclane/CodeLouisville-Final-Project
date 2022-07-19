@@ -217,7 +217,7 @@ function buildForumTopic(post) {
     if (post.thumbnailUrl) {
         const thumbnail = createImgElement(post.thumbnailUrl, "");
         li.appendChild(thumbnail);
-        li.appendChild(createImgSeperator());
+        li.appendChild(createImgSeparator());
     }
     li.appendChild(a);
     list.appendChild(li);
