@@ -192,9 +192,9 @@ PRODUCTS.sort(() => Math.random() - 0.5);
 populateList("new-products", PRODUCTS.slice(0, 5));
 populateList("trending-products", PRODUCTS.slice(5, 10));
 
-function createImgSeperator() {
+function createImgSeparator() {
     const div = document.createElement("div");
-    div.classList = "img-seperator";
+    div.classList = "img-separator";
     return div;
 }
 
@@ -217,7 +217,7 @@ function buildForumTopic(post) {
     if (post.thumbnailUrl) {
         const thumbnail = createImgElement(post.thumbnailUrl, "");
         li.appendChild(thumbnail);
-        li.appendChild(createImgSeperator());
+        li.appendChild(createImgSeparator());
     }
     li.appendChild(a);
     list.appendChild(li);
