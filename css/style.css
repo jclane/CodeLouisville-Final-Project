@@ -209,7 +209,7 @@ footer a:hover {
     }
 
     nav #main-menu {
-        display: flex;
+        display: flex !important;
         flex-flow: row nowrap;
         list-style-type: none;
         padding: 0;
