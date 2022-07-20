@@ -195,6 +195,9 @@ footer a:hover {
     header {
         display: flex;
         justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        width: 100%;
     }
 
     .navigation {
@@ -219,6 +222,10 @@ footer a:hover {
 
     .member-links {
         background: green;
+    }
+
+    main {
+        padding-top: 63px;
     }
 
     .container {
@@ -247,4 +254,6 @@ footer a:hover {
         margin-left: 1em;
         margin-bottom: 0;
     }
+
+    
 }
