@@ -56,13 +56,13 @@ header {
 }
 
 .navigation {
+    background: pink;
     display: flex;
     justify-content: space-between;
 }
 
 .nav-link {
     text-decoration: none;
-    width: 100%;
     color: var(--white);
 }
 
@@ -198,8 +198,7 @@ footer a:hover {
     }
 
     .navigation {
-        display: grid;
-        grid-template-rows: min-content;
+        align-items: center;
     }
 
     nav .hamburger {
@@ -218,7 +217,7 @@ footer a:hover {
     }
 
     .member-links {
-        align-self: flex-end;
+        background: green;
     }
 
     .container {
