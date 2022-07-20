@@ -56,7 +56,6 @@ header {
 }
 
 .navigation {
-    background: pink;
     display: flex;
     justify-content: space-between;
 }
