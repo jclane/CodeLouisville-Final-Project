@@ -211,7 +211,7 @@ footer a:hover {
 
     nav #main-menu {
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
         list-style-type: none;
         padding: 0;
     }
