@@ -63,6 +63,7 @@ header {
 .nav-link {
     text-decoration: none;
     color: var(--white);
+    width: 100%;
 }
 
 .nav-link:hover {
@@ -73,7 +74,7 @@ nav #main-menu {
     display: none;
     list-style-type: none;
     padding: 0;
-    width: 100%;
+    width: 100vw;
     background: red;
 }
 
@@ -200,7 +201,6 @@ footer a:hover {
     }
 
     .navigation {
-        flex: 1;
         align-items: center;
     }
 
