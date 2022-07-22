@@ -26,10 +26,15 @@ header {
     grid-template-rows: auto;
     justify-content: center;
     box-shadow: 0 .25em 1em var(--black);
+    width: 100vw;
 }
 
 .logo {
     grid-column: 2;
+}
+
+.hamburger {
+    padding-bottom: .5em;
 }
 
 .hamburger div {
@@ -37,7 +42,7 @@ header {
     height: .10rem;
     position: relative;
     background: var(--white);
-    left: .5rem;
+    left: .65rem;
     margin: .15rem;
     transition: 0.4s;
     cursor: pointer;
@@ -57,7 +62,12 @@ header {
 
 .navigation {
     display: flex;
-    justify-content: space-between;
+}
+
+nav #main-menu {
+    display: none;
+    list-style-type: none;
+    padding: 0 1em;
 }
 
 .nav-link {
@@ -67,12 +77,6 @@ header {
 
 .nav-link:hover {
     color: var(--yellow);
-}
-
-nav #main-menu {
-    display: none;
-    list-style-type: none;
-    padding: 0;
 }
 
 .list-container {
@@ -208,15 +212,10 @@ footer a:hover {
         display: flex !important;
         flex-flow: row nowrap;
         list-style-type: none;
-        padding: 0;
     }
 
     .nav-link {
         padding: 1em;
-    }
-
-    .member-links {
-        background: green;
     }
 
     main {
