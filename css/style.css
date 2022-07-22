@@ -66,8 +66,11 @@ header {
 
 nav #main-menu {
     display: none;
+    margin: 0;
     list-style-type: none;
-    padding: 0 1em;
+    padding: 0 0 .5em 1em;
+    width: 100vw;
+    background: red;
 }
 
 .nav-link {
