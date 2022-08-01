@@ -68,9 +68,8 @@ nav #main-menu {
     display: none;
     margin: 0;
     list-style-type: none;
+    width: 100%;
     padding: 0 0 .5em 1em;
-    width: 100vw;
-    background: var(--secondary-color);
 }
 
 .nav-link {
@@ -83,7 +82,7 @@ nav #main-menu {
 }
 
 nav #main-menu li:nth-child(odd) {
-    background: red;
+    background: var(--dark-blue);
 }
 
 .list-container {
