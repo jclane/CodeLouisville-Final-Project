@@ -70,7 +70,7 @@ nav #main-menu {
     list-style-type: none;
     padding: 0 0 .5em 1em;
     width: 100vw;
-    background: red;
+    background: var(--secondary-color);
 }
 
 .nav-link {
@@ -80,6 +80,11 @@ nav #main-menu {
 
 .nav-link:hover {
     color: var(--yellow);
+}
+
+nav #main-menu li:nth-child(odd) {
+    background: red;
+    width: 100vw;
 }
 
 .list-container {
