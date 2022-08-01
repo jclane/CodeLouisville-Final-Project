@@ -84,7 +84,6 @@ nav #main-menu {
 
 nav #main-menu li:nth-child(odd) {
     background: red;
-    width: 100vw;
 }
 
 .list-container {
